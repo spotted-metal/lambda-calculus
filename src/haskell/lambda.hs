@@ -1,3 +1,5 @@
+module Lambda (Term(Var, Lam, App), subst, alpha, beta) where
+
 import qualified Data.Set as Set
 
 -- Lambda calculus, as presented by Alonzo Church.

@@ -1,3 +1,5 @@
+module DeBruijn(Term(Var, Lam, App), subst, alpha, beta) where
+
 -- Lambda calculus using de Bruijn indices.
 type Variable = Integer
 
