@@ -28,7 +28,7 @@ subst n x (Lam t) = Lam (subst (n+1) (incfree x) t)
 -- alpha-renaming
 -- Using de Bruijn indices, alpha-equivalent terms are syntactically equal.
 alpha :: Term -> Term
-alpha = id
+alpha (Lam t) = Lam (subst 0 (Var 0) t) -- alpha = id
 
 -- beta-reduction
 beta :: Term -> Term
